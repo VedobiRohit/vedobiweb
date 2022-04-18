@@ -1,0 +1,7 @@
+export const OPEN_SIDE_CART = 'OPEN_SIDE_CART';
+export const CLOSE_SIDE_CART = 'CLOSE_SIDE_CART';
+export const TOGGLE_SIDE_CART = 'TOGGLE_SIDE_CART';
+export const TOGGLE_SIDE_BAR = 'TOGGLE_SIDE_BAR';
+export const CLOSE_SIDEBAR = 'CLOSE_SIDEBAR';
+export const SHOW_DRAWER = 'SHOW_DRAWER';
+export const CLOSE_DRAWER = 'CLOSE_DRAWER';

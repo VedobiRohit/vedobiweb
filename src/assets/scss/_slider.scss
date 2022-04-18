@@ -1,0 +1,305 @@
+/*----- 3. Slider style  ------*/
+.slider-area {
+  .swiper-container {
+    .swiper-wrapper {
+      .swiper-slide {
+        overflow: hidden;
+
+        a {
+          img {
+            transform: scale(1.3);
+            transition: all 3.3s;
+          }
+        }
+
+        &.swiper-slide-active {
+          a {
+            img {
+              transform: scale(1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.slider-loader {
+  width: 100%;
+  height: 700px !important;
+
+  @media #{$xs-layout} {
+    height: 300px !important;
+  }
+}
+
+.nav-style-1 {
+  .ht-swiper-button-nav {
+    font-size: 50px;
+
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    display: inline-block;
+    background: $bg-grey;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
+    transition: all 0.3s ease 0s;
+    transform: translateY(-50%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #999;
+    border: none;
+
+    @media #{$xl-layout} {
+      left: 30px;
+    }
+    @media #{$lg-layout} {
+      left: 30px;
+    }
+    @media #{$md-layout} {
+      left: 15px;
+    }
+    @media #{$xs-layout} {
+      font-size: 30px;
+      left: 0px;
+      height: 40px;
+      width: 20px;
+      border-radius: 0;
+      transform: translateY(0);
+    }
+    &:hover {
+      background: $theme-color;
+      color: $white;
+    }
+    &.swiper-button-next {
+      right: 80px;
+      left: auto;
+      @media #{$xl-layout} {
+        right: 30px;
+      }
+      @media #{$lg-layout} {
+        right: 30px;
+      }
+      @media #{$md-layout} {
+        right: 15px;
+      }
+      @media #{$xs-layout} {
+        right: 0px;
+      }
+    }
+  }
+
+  &.nav-testi-style {
+    .owl-nav {
+      div {
+        font-size: 50px;
+
+        left: -155px;
+
+        color: #8d8c8c;
+        @media #{$xl-layout} {
+          left: -80px;
+        }
+        @media #{$lg-layout} {
+          left: -80px;
+        }
+        @media #{$md-layout} {
+          left: -30px;
+        }
+        @media #{$xs-layout} {
+          display: none;
+        }
+        &:hover {
+          color: #3d6882;
+        }
+        &.owl-next {
+          right: -155px;
+          left: auto;
+          @media #{$xl-layout} {
+            right: -80px;
+          }
+          @media #{$lg-layout} {
+            right: -80px;
+          }
+          @media #{$md-layout} {
+            right: -30px;
+          }
+        }
+      }
+    }
+    &.nav-testi-mrg {
+      .owl-nav {
+        div {
+          left: -80px;
+
+          color: #fff;
+          @media #{$md-layout} {
+            left: 0;
+          }
+          @media #{$xs-layout} {
+            display: none;
+          }
+          &.owl-next {
+            right: -80px;
+            left: auto;
+            @media #{$md-layout} {
+              right: 0;
+              left: auto;
+            }
+            @media #{$xs-layout} {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.slider-area {
+  &:hover .nav-style-1 .ht-swiper-button-nav {
+    visibility: visible;
+
+    opacity: 1;
+  }
+  &.ml-10 {
+    margin-left: 0;
+  }
+  @media #{$xl-layout} {
+    &.ml-70 {
+      margin-left: 15px;
+    }
+    &.mr-70 {
+      margin-right: 15px;
+    }
+  }
+  @media #{$lg-layout} {
+    &.ml-70 {
+      margin-left: 30px;
+    }
+    &.mr-70 {
+      margin-right: 30px;
+    }
+  }
+  @media #{$md-layout} {
+    &.ml-70 {
+      margin-left: 40px;
+    }
+    &.mr-70 {
+      margin-right: 40px;
+    }
+  }
+  @media #{$xs-layout} {
+    &.ml-70 {
+      margin-left: 15px;
+    }
+    &.mr-70 {
+      margin-right: 15px;
+    }
+  }
+
+  .swiper-pagination-bullets {
+    position: absolute;
+    right: 0;
+    bottom: 26px;
+    left: 0;
+
+    @media #{$xs-med-layout} {
+      bottom: 5px;
+    }
+
+    text-align: center;
+    .swiper-pagination-bullet {
+      position: relative;
+
+      display: inline-block;
+
+      width: 14px;
+      height: 14px;
+      margin: 0 8px;
+
+      opacity: 1;
+      border-radius: 100%;
+      // background: $theme-color none repeat scroll 0 0;
+      border: 1px solid $theme-color;
+      background: transparent;
+
+      @media #{$xs-med-layout} {
+        height: 8px;
+        width: 8px;
+        margin: 0 5px;
+      }
+      &:before {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        bottom: -3px;
+        left: -3px;
+        content: "";
+        border: 1px solid transparent;
+        border-radius: 100%;
+        display: none;
+
+        @media #{$xs-med-layout} {
+          display: none;
+        }
+      }
+      &-active {
+        width: 26px;
+        background: $theme-color;
+        border-radius: 20px;
+
+        @media #{$xs-med-layout} {
+          width: 16px;
+        }
+      }
+    }
+  }
+}
+
+.ht-swiper-button-nav {
+  &:after {
+    font-size: 0;
+  }
+}
+
+.top-discount-product,
+.top-recommends,
+.recently-view-product,
+.similar-product,
+.best-selling {
+  .swiper-container {
+    width: 100%;
+    .swiper-wrapper {
+      padding-top: 10px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      background: $theme-color;
+      border-radius: 5px;
+      color: $white;
+      font-size: 40px;
+      border: none;
+
+      &:hover {
+        background: $theme-hover-color;
+      }
+
+      @media #{$xs-med-layout} {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      left: 25px;
+    }
+    .swiper-button-next {
+      right: 25px;
+    }
+  }
+}

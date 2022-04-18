@@ -1,0 +1,64 @@
+/*-----  Certification style  ------*/
+
+.certification-area {
+  padding: 20px;
+  border: 2px solid #1e1f59;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px -7px rgba(0, 0, 0, .6),
+    0 6px 40px -20px rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  height: 100%;
+
+  @media #{$lg-med-layout} {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  @media #{$xs-layout} {
+    margin-bottom: 20px;
+  }
+
+  @media #{$xs-layout} {
+    flex-direction: column;
+  }
+
+  .certif_images {
+    flex: 0 0 150px;
+    margin-right: 10px;
+
+    @media #{$xs-layout} {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  .certification-txt {
+    text-align: justify;
+
+    @media #{$xs-layout} {
+      text-align: inherit;
+    }
+
+    h5 {
+      font-size: 18px;
+      font-weight: 600;
+
+      @media #{$xs-layout} {
+        text-align: center;
+        line-height: 1.2;
+      }
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 13px;
+
+      @media #{$xs-layout} {
+        text-align: justify;
+      }
+    }
+  }
+}

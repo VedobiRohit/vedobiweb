@@ -1,0 +1,95 @@
+/*------- 5. Section title style  -------*/
+
+.section-title {
+  @media #{$xs-layout} {
+    &.mb-50 {
+      margin-bottom: 30px;
+    }
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+
+    position: relative;
+
+    display: inline-block;
+
+    margin: 0 0 0;
+    border: 2px solid $theme-color;
+    padding: 5px 15px;
+    border-radius: 25px;
+    border-left-width: 6px;
+    border-right-width: 6px;
+    color: #21215c;
+    box-shadow: 0 6px 7px rgba(0, 128, 96, .2);
+    background: $bg-white;
+
+    @media #{$xs-layout} {
+      font-size: 24px;
+      line-height: 30px;
+      &.mb-50 {
+        margin-bottom: 30px;
+      }
+    }
+    // &::before {
+    //   position: absolute;
+    //   top: 17px;
+    //   left: -100px;
+
+    //   width: 80px;
+    //   height: 2px;
+
+    //   content: "";
+
+    //   background-color: #000;
+    //   @media #{$xs-layout} {
+    //     left: -40px;
+
+    //     width: 30px;
+    //   }
+    // }
+    // &::after {
+    //   position: absolute;
+    //   top: 17px;
+    //   right: -100px;
+
+    //   width: 80px;
+    //   height: 2px;
+
+    //   content: "";
+
+    //   background-color: #000;
+    //   @media #{$xs-layout} {
+    //     right: -40px;
+
+    //     width: 30px;
+    //   }
+    // }
+  }
+  &.mb-55 {
+    @media #{$xs-layout} {
+      margin-bottom: 30px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+
+    margin-top: 10px;
+
+    &.grey {
+      color: #808080;
+    }
+  }
+
+  &.no-border {
+    h2 {
+      font-size: 36px;
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

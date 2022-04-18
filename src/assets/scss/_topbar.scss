@@ -1,0 +1,44 @@
+.topbar {
+  background: $theme-hover-color;
+  position: relative;
+  padding: 5px 0;
+
+  .topbar__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media #{$xs-med-layout} {
+      flex-direction: column;
+    }
+
+    .topbar__bar__left,
+    .topbar__bar__right {
+      display: block;
+
+      p {
+        font-weight: 400;
+        color: $grey;
+        display: flex;
+        align-items: center;
+
+        svg,
+        i {
+          font-size: 18px;
+          margin-right: 3px;
+          font-weight: 600;
+        }
+
+        a {
+          font-weight: 500;
+          color: $white;
+          letter-spacing: 1px;
+
+          &:hover {
+            color: $theme-color;
+          }
+        }
+      }
+    }
+  }
+}

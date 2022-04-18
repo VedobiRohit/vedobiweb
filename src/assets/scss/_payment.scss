@@ -1,0 +1,254 @@
+.review-change-add-bar {
+  padding: 15px;
+  border: 1px solid $bg-grey-shade-1;
+  border-radius: 10px;
+  background: $bg-white;
+
+  .review-block {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid $bg-grey-shade-1;
+
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .review-block-left {
+      display: flex;
+      flex: 1;
+
+      @media #{$xxs-md-layout} {
+        flex-direction: column;
+        flex: 1;
+      }
+
+      .review-label {
+        font-weight: 600;
+        margin-right: 20px;
+        color: #787878;
+        font-size: 13px;
+        flex: 0 0 5em;
+
+        @media #{$xxs-md-layout} {
+          flex: 1;
+          font-size: 12px;
+        }
+      }
+
+      .review-label-content {
+        font-size: 13px;
+        color: #2c2c2c;
+        flex-grow: 1;
+
+        @media #{$xxs-md-layout} {
+          font-size: 12px;
+        }
+
+        span {
+          font-weight: 600;
+          color: $black;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .review-block-right {
+      margin-left: 20px;
+
+      .review-change-btn {
+        font-size: 16px;
+        color: $navy-blue-shade;
+      }
+    }
+  }
+}
+
+.payment-main-box {
+  margin-top: 2em;
+
+  .box-title-bar {
+    margin-bottom: -1px;
+    border: 1px solid #008060;
+    border-left-width: 4px;
+    padding: 10px 0 5px 10px;
+    border-radius: 10px;
+    position: relative;
+
+    .box-title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 0px;
+      line-height: 1;
+      color: #767676;
+    }
+    .desc {
+      font-size: 12px;
+      font-weight: 500;
+      color: #6e6e6e;
+    }
+  }
+}
+
+.payment-area {
+  border: 1px solid $bg-grey-shade-1;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .payment-box {
+    position: relative;
+
+    &:last-child {
+      .custom-radio-box {
+        .input-label {
+          border-bottom: 0;
+        }
+      }
+      .payment_mthd_content {
+        border-top: 1px solid $bg-grey-shade-1;
+        border-bottom: 0;
+      }
+    }
+
+    .payment_mthd_content {
+      border-bottom: 1px solid $bg-grey-shade-1;
+
+      &[aria-hidden="true"] {
+        display: none;
+      }
+
+      .inner-content {
+        text-align: center;
+        padding: 20px 10px;
+        background: #f9f9f9;
+
+        .card-icon {
+          margin-bottom: 1em;
+
+          img {
+            height: 100px;
+          }
+        }
+
+        p {
+          max-width: 70%;
+          margin: 0 auto;
+          font-weight: 500;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.custom-radio-box {
+  position: relative;
+
+  .input-label {
+    padding: 10px 10px 10px 40px;
+    border-bottom: 1px solid $bg-grey-shade-1;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 10px;
+      height: 20px;
+      width: 20px;
+      border: 1px solid $bg-grey-shade-1;
+      transform: translateY(-50%);
+      border-radius: 50%;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) scale(0);
+      border-radius: 50%;
+      content: "";
+      height: 6px;
+      width: 6px;
+      left: 17px;
+      transition: transform 0.5s;
+      background: $bg-grey-shade-1;
+    }
+
+    .payment-methods-list {
+      display: flex;
+      position: relative;
+
+      li {
+        height: 20px;
+        width: 36px;
+        margin-left: 5px;
+        border: 1px solid $bg-grey-shade-1;
+        border-radius: 5px;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &.icon--visa {
+          background-image: url(../images/label-icons/icon--visa.png);
+        }
+        &.icon--master {
+          background-image: url(../images/label-icons/icon--master.png);
+        }
+        &.icon--maestro {
+          background-image: url(../images/label-icons/icon--maestro.png);
+        }
+        &.icon--amex {
+          background-image: url(../images/label-icons/icon--amex.png);
+        }
+        &.icon--rupay {
+          background-image: url(../images/label-icons/icon--rupay.png);
+        }
+        &.icon--more {
+          border: 0;
+          height: auto;
+          width: auto;
+          border-radius: 0;
+
+          small {
+            font-weight: 700;
+            color: #626262;
+          }
+        }
+      }
+    }
+    .payment-method-name {
+      font-weight: 600;
+      color: #3c3c3c;
+    }
+  }
+
+  input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.custom-radio-box input[type="radio"]:checked + .input-label::before {
+  border-color: $bg-navy-blue-shade;
+  transition: all 0.5s;
+  background: $bg-navy-blue-shade;
+}
+.custom-radio-box input[type="radio"]:checked + .input-label::after {
+  background: $bg-white;
+  transform: scale(1) translateY(-50%);
+}

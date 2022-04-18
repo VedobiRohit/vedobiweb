@@ -1,0 +1,44 @@
+/*------ 16. Breadcrumb style  --------*/
+
+.breadcrumb-area {
+  background: $grey;
+  nav {
+    margin: 0;
+    .breadcrumb {
+      background: transparent;
+      position: relative;
+      padding: 10px;
+      margin: 0;
+      .breadcrumb-item {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 500;
+        color: #5b5858;
+        position: relative;
+        text-transform: capitalize;
+
+        &.active {
+          color: $navy-blue-shade;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+        a {
+          color: #5b5858;
+          &:hover {
+            color: $theme-color;
+          }
+
+          svg, i {
+            position: relative;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .breadcrumb-item + .breadcrumb-item::before {
+        font-family: 'FontAwesome';
+        content: '\f105';
+      }
+    }
+  }
+}
